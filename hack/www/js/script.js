@@ -203,7 +203,7 @@ function exploitLoop() {
 		localStorage.setItem('skin_id_7', 1)
 	};
 
-    //
+    // Remove spikes
     if (removespikes) {
 		let map = Game.levelMap.map,
 			spikes = [4, 5, 6, 7];
