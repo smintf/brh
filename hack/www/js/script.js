@@ -173,6 +173,7 @@ var skins = [
 	flight = false,
 	mouseY = 100,
 	collision = true,
+	removespikes = false;
 	unlockskin = false;
 
 canvas.addEventListener('mousemove', (e) => { mouseY = e.clientY - 5; });
@@ -200,9 +201,25 @@ function exploitLoop() {
 		localStorage.setItem('skin_id_5', 1)
 		localStorage.setItem('skin_id_6', 1)
 		localStorage.setItem('skin_id_7', 1)
-	}
+	};
 
-}
+    //
+    if (removespikes) {
+		let map = Game.levelMap.map,
+			spikes = [4, 5, 6, 7];
+		for (let j = 0; j < map.length; ++j) {
+			for (let i = 0; i < map[j].length; ++i) {
+				let tile = map[j][i];
+				if (spikes.indexOf(tile.type) != -1) {
+					tile.type = 1;
+					tile.spike = true;
+				};
+			};
+		};
+	};
+
+};
+
 exploitLoop();
 
 var elem = drewsnow.addHtml(`
@@ -320,19 +337,9 @@ document.getElementById('unlockskin').addEventListener('click', function () {
 	unlockskin = !unlockskin;
 });
 
-document.getElementById('removespikes').addEventListener('click', () => {
-	let map = Game.levelMap.map,
-		spikes = [4, 5, 6, 7];
-
-	for (let j = 0; j < map.length; ++j) {
-		for (let i = 0; i < map[j].length; ++i) {
-			let tile = map[j][i];
-			if (spikes.indexOf(tile.type) != -1) {
-				tile.type = 1;
-				tile.spike = true;
-			}
-		}
-	}
+document.getElementById('removespikes').addEventListener('click', function () {
+	this.classList.toggle('active');
+	removespikes = !removespikes;
 });
 
 document.getElementById('noclip').addEventListener('click', function () {
