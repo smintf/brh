@@ -24,9 +24,9 @@ A hack for [Boxel Rebound](https://chrome.google.com/webstore/detail/boxel-rebou
 
 ### How to Install?
 
-1. Download the extension from [here](https://nightly.link/smintf/brh/workflows/main/main/brh.zip).
+1. Download the extension from [here](https://nightly.link/smintf/brh/workflows/main/main/BoxelRebound.zip).
 3. Open the "Manage Extensions" page on your browser and turn on "Developer Mode"
-4. Drag and drop `brh.zip` into the "Manage Extensions" page.
+4. Drag and drop `BoxelRebound.zip` into the "Manage Extensions" page.
 
 ### How do I use This?
 
