@@ -8,7 +8,7 @@
         //prototype functions
         this.init = function() {
             //initiate object variables
-            this.showFPS = false;
+            this.showFPS = true;
             this.gamePaused = false;
             this.speed = 1;
             this.speedMultiplier = 1;
