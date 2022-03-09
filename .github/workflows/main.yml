@@ -22,7 +22,20 @@ jobs:
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
+        steps:
+      - uses: actions/checkout@v2
+
+      - name: Remove README file
+        run: rm README.md
+
+        
+      - name: Remove .git dir
+        run: rm -r .git
+        
+        
+      - name: Remove .github dir
+        run: rm -r .github
+        
       - uses: actions/upload-artifact@v3.0.0
         with:
           name: BoxelRebound
