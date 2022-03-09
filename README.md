@@ -28,9 +28,9 @@ A hack for [Boxel Rebound](https://chrome.google.com/webstore/detail/boxel-rebou
 3. Open the "Manage Extensions" page on your browser and turn on "Developer Mode"
 4. Drag and drop `brh.zip` into the "Manage Extensions" page.
 
-### How do i Use This?
+### How do I use This?
 
-You can access the GUI by pressing the "~"/ Tide key.
+You can access the GUI by pressing the "~" / Tide key.
 
 ### Features
 

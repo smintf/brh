@@ -172,7 +172,8 @@ var skins = [
 	noJumpCooldown = false,
 	flight = false,
 	mouseY = 100,
-	collision = true;
+	collision = true,
+	unlockskin = false;
 
 canvas.addEventListener('mousemove', (e) => { mouseY = e.clientY - 5; });
 
@@ -183,12 +184,24 @@ function exploitLoop() {
 		Game.player.jumpReady = true;
 		Game.player.y = mouseY;
 		Game.player.jump(speed, 750);
-		
 	}
 
 	// Jump cooldown
 	if (noJumpCooldown) Game.player.jumpReady = true;
 	window.requestAnimationFrame(exploitLoop);
+
+    // Skin unlocker
+	if (unlockskin) {
+		localStorage.setItem('skin_id_0', 1)
+		localStorage.setItem('skin_id_1', 1)
+		localStorage.setItem('skin_id_2', 1)
+		localStorage.setItem('skin_id_3', 1)
+		localStorage.setItem('skin_id_4', 1)
+		localStorage.setItem('skin_id_5', 1)
+		localStorage.setItem('skin_id_6', 1)
+		localStorage.setItem('skin_id_7', 1)
+	}
+
 }
 exploitLoop();
 
@@ -200,12 +213,13 @@ var elem = drewsnow.addHtml(`
 		</nav>
 	
 		<div class="exploit-container" style="padding: 10px 5px; border-radius: 3px; background-color: #141414; position: absolute; bottom: 0; width: auto; height: 425px; margin: 2px;">
-			<button id="instantwin">Instant win</button>
+			<button id="instantwin">InstantLevelComplete</button>
 			<button id="highscores">Unlock all levels and highscore</button>
-			<button id="nocooldown">No jump cooldown</button>
+			<button id="noclip">NoClip</button>
+			<button id="nocooldown">NoJumpCooldown</button>
 			<button id="flight">Flight</button>
-			<button id="removespikes">Remove Spikes</button>
-			<button id="noclip">No Clip</button>
+			<button id="removespikes">UselessSpikes</button>
+			<button id="unlockskin">Unlocked Skins</button>
 
 			Skin<input value="0" min="0" max="7" type="range" class="slider" id="class-selecter">
 
@@ -299,6 +313,11 @@ document.getElementById('nocooldown').addEventListener('click', function () {
 document.getElementById('flight').addEventListener('click', function () {
 	this.classList.toggle('active');
 	flight = !flight;
+});
+
+document.getElementById('unlockskin').addEventListener('click', function () {
+	this.classList.toggle('active');
+	unlockskin = !unlockskin;
 });
 
 document.getElementById('removespikes').addEventListener('click', () => {
