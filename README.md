@@ -30,7 +30,7 @@ A hack for [Boxel Rebound](https://chrome.google.com/webstore/detail/boxel-rebou
 
 ### How do I use This?
 
-You can access the GUI by pressing the "~" / Tide key.
+You can access the GUI by pressing the "~" / Tilde key.
 
 ### Features
 
