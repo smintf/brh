@@ -241,6 +241,8 @@ var elem = drewsnow.addHtml(`
 			Skin<input value="0" min="0" max="7" type="range" class="slider" id="class-selecter">
 
 			Flight Speed<input value="3" min="1" max="30" type="range" class="slider" id="flight-speed">
+
+			Speed<input value="1.5" min="0" max="3" type="range" class="slider" id="speeed">
 		</div>
 		
 	</div>
@@ -361,4 +363,9 @@ document.getElementById('class-selecter').value = localStorage.getItem('skin') |
 document.getElementById('class-selecter').addEventListener('change', function () {
 	let skin = skins[Number(this.value)];
 	localStorage.setItem('skin', skin.id);
+});
+
+document.getElementById('speeed').addEventListener('change', function () {
+	let speed = speeds[Number(this.value)];
+	Game.speed = speed
 });
