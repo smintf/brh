@@ -42,8 +42,8 @@ You can access the GUI by pressing the "~" / Tilde key.
 - [x] InstantLevelComplete
 - [x] UnlockedSkins
 
-### Recources
+### Resources
 
 - [Hack script from SnowLord7](https://github.com/SnowLord7/Boxel-Rebound-Cheat)
-- [Hack script from Trinculo54](https://github.com/Trinculo54/Boxel-rebound-hope)
+- [Updated Hack from Trinculo54](https://github.com/Trinculo54/Boxel-rebound-hope)
 - [Original Game by DopplerArcade](https://chrome.google.com/webstore/detail/boxel-rebound/iginnfkhmmfhlkagcmpgofnjhanpmklb?hl=en-US)
