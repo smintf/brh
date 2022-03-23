@@ -26,6 +26,8 @@ jobs:
       - name: Remove .github dir
         run: rm -r .github
         
+      - name: Remove .whitesource
+        run: rm .whitesource
         
       - uses: actions/upload-artifact@v2
         with:
