@@ -16,6 +16,9 @@
   <a href="https://www.chromium.org/Home/">
       <img src="https://img.shields.io/badge/supports-chromium-blue">
   </a>
+  <a href="https://opensource.org/">
+      <img src="https://img.shields.io/badge/Open%20Source-true-brightgreen">
+  </a>
 </p>
 
 ### What's this?
